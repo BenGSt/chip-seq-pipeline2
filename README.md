@@ -20,6 +20,13 @@ This ChIP-Seq pipeline is based off the ENCODE (phase-3) transcription factor an
 	$ pip install caper
 	```
 
+	Note by bengst 31.10.23: install caper in its own conda &#40;micromamba&#41; env
+
+	```bash
+	$ micromamba create  -n caper -c bioconda caper
+	```
+
+
 2) **IMPORTANT**: Read Caper's [README](https://github.com/ENCODE-DCC/caper/blob/master/README.md) carefully to choose a backend for your system. Follow the instruction in the configuration file.
 	```bash
 	# backend: local or your HPC type (e.g. slurm, sge, pbs, lsf). read Caper's README carefully.
