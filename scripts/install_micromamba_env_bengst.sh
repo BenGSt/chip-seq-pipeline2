@@ -33,7 +33,7 @@ micromamba create -f ${SH_SCRIPT_DIR}/requirements_bengst.yml
 micromamba create -f ${SH_SCRIPT_DIR}/requirements.macs2_bengst.yml
 
 
-conda create -n encd-chip-spp -f ${SH_SCRIPT_DIR}/requirements.spp.txt
+micromamba create -f ${SH_SCRIPT_DIR}/requirements.spp_bengst.yml
 
 # adhoc fix for the following issues:
 # - https://github.com/ENCODE-DCC/chip-seq-pipeline2/issues/259
