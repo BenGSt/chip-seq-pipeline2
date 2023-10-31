@@ -27,14 +27,13 @@ SH_SCRIPT_DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
 echo "$(date): Installing pipeline's Conda environments..."
 
-conda create -n encd-chip --file ${SH_SCRIPT_DIR}/requirements.txt \
-  --override-channels -c bioconda -c defaults -y
+micromamba create -f ${SH_SCRIPT_DIR}/requirements_bengst.yml
 
-conda create -n encd-chip-macs2 --file ${SH_SCRIPT_DIR}/requirements.macs2.txt \
-  --override-channels -c bioconda -c defaults -y
 
-conda create -n encd-chip-spp --file ${SH_SCRIPT_DIR}/requirements.spp.txt \
-  -c r -c bioconda -c defaults -y
+micromamba create -f ${SH_SCRIPT_DIR}/requirements.macs2_bengst.yml
+
+
+conda create -n encd-chip-spp -f ${SH_SCRIPT_DIR}/requirements.spp.txt
 
 # adhoc fix for the following issues:
 # - https://github.com/ENCODE-DCC/chip-seq-pipeline2/issues/259

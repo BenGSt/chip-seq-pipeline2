@@ -1,0 +1,20 @@
+# Conda environment for tasks (macs2, macs2_signal_track) in atac/chip 
+name: encd-chip-macs2
+prefix: /home/s.benjamin/micromamba/envs/encode_chip_seq/encd-chip-macs2/
+channels:
+  - bioconda
+  - defaults
+dependencies:
+  - nomkl # using MKL can change MACS2 output randomly on different platforms
+  - python >=3
+
+  - macs2 ==2.2.4
+  - bedtools ==2.29.0
+  - bedops ==2.4.39
+  - pybedtools ==0.8.0
+  - pybigwig ==0.3.13
+  - tabix
+
+  - matplotlib
+  - ghostscript
+
