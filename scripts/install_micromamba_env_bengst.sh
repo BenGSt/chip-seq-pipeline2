@@ -81,4 +81,4 @@ echo
 echo "If you see readline or ncurses library errors while running pipelines"
 echo "then switch to Singularity method. Conda method will not work on your system."
 
-bash ${SH_SCRIPT_DIR}/update_conda_env.sh
+bash ${SH_SCRIPT_DIR}/update_micromamba_env_bengst.sh
