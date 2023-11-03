@@ -42,8 +42,8 @@ dependencies:
   - idr ==2.0.4.2
 
 #  - java-jdk
-#above line was getting old version of java and cromwell crashed - added conda-forge channel and version requirement
-  - java-jdk==21.0.1
+#above line was getting old version of java and cromwell crashed - added conda-forge channel and using openjdk
+  - openjdk >20
 
   - picard ==2.20.7
   - trimmomatic ==0.39
