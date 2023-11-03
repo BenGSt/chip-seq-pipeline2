@@ -43,7 +43,7 @@ dependencies:
 
 #  - java-jdk
 #above line was getting old version of java and cromwell crashed - added conda-forge channel and version requirement
-  - java-jdk>=20
+  - java-jdk==21.0.1
 
   - picard ==2.20.7
   - trimmomatic ==0.39
