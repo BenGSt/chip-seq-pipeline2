@@ -41,9 +41,7 @@ dependencies:
   - samstats ==0.2.1
   - idr ==2.0.4.2
 
-#  - java-jdk
-#above line was getting old version of java and cromwell crashed - added conda-forge channel and using openjdk
-  - openjdk
+  - java-jdk
 
   - picard ==2.20.7
   - trimmomatic ==0.39
