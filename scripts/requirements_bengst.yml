@@ -3,6 +3,7 @@ name: encd-chip
 prefix: /home/s.benjamin/micromamba/envs/encode_chip_seq/encd-chip/
 channels:
   - bioconda
+  - conda-forge
   - defaults
 dependencies:
   - python >=3
@@ -40,7 +41,9 @@ dependencies:
   - samstats ==0.2.1
   - idr ==2.0.4.2
 
-  - java-jdk
+#  - java-jdk
+#above line was getting old version of java and cromwell crashed - added conda-forge channel and version requirement
+  - java-jdk>=20
 
   - picard ==2.20.7
   - trimmomatic ==0.39
