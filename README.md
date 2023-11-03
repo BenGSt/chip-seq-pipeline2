@@ -27,6 +27,7 @@ This ChIP-Seq pipeline is based off the ENCODE (phase-3) transcription factor an
 	$ micromamba create  -n caper  python pip
  	$ micromamba activate caper
  	$ pip install caper
+ 	#conda install -c conda-forge openjdk
 	```
 
 
