@@ -24,8 +24,8 @@ This ChIP-Seq pipeline is based off the ENCODE (phase-3) transcription factor an
 
 	```bash
  	#install the latest version of python and pip in an env called caper
-	micromamba create  -n caper  python pip
- 	micromamba activate caper
+	conda create  -n caper  python pip
+ 	conda activate caper
  	#install caper
  	pip install caper
  	
