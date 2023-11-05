@@ -23,7 +23,7 @@ write_bakend_conf(){
 
 arg_parse() {
   if [ $# -lt 1 ]; then
-    echo "Usage: $0 <input_json> [lead_job_name]"
+    echo "Usage: encd_chip <input_json> [lead_job_name]"
     exit 1
   fi
   input_json=$(realpath $1)
