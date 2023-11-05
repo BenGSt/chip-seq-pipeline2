@@ -18,7 +18,7 @@ main() {
 write_bakend_conf(){
   echo "Writing backend.conf"
   cp $ENCD_CHIP_DIR/bengst_zeus.cromwell.backend.conf ./zeus.backend.conf
-  sed -i "s|\"/utemp/s.benjamin/cromwell-executions\"|$PWD|" ./zeus.backend.conf
+  sed -i "s|/utemp/s.benjamin/cromwell-executions|$PWD|" ./zeus.backend.conf
 }
 
 arg_parse() {
