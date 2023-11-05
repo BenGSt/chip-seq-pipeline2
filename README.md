@@ -90,14 +90,14 @@ This ChIP-Seq pipeline is based off the ENCODE (phase-3) transcription factor an
 
 7) (Optional Conda method) **WE DO NOT HELP USERS FIX CONDA DEPENDENCY ISSUES. IF CONDA METHOD FAILS THEN PLEASE USE SINGULARITY METHOD INSTEAD**. **DO NOT USE A SHARED CONDA. INSTALL YOUR OWN [MINICONDA3](https://docs.conda.io/en/latest/miniconda.html) AND USE IT.**
 
-    
-bengst 4.11.23: I made some changes to the installation scripts and the requirement files. 
-To install use my scripts to create the environments with micromamba (a faster implementation of conda)
-then clone them to conda envs. (Actually After spending some time on configuring the cromwell backend 
-because of other issues, mostly request correct number of cpus, and remove -V from qsub to get conda to work,
-[see bengst_zeus.cromwell.backend.conf] I realize it should be easy to define it to use micromamba instead of conda.
-Since it works I'll leave it as is for now.)
-    ```bash
+	bengst 4.11.23: I made some changes to the installation scripts and the requirement files. 
+	To install use my scripts to create the environments with micromamba (a faster implementation of conda)
+	then clone them to conda envs. (Actually After spending some time on configuring the cromwell backend 
+	because of other issues, mostly request correct number of cpus, and remove -V from qsub to get conda to work,
+	[see bengst_zeus.cromwell.backend.conf] I realize it should be easy to define it to use micromamba instead of conda.
+	Since it works I'll leave it as is for now.)
+
+	```bash
     # check if you are not using a shared conda, if so then delete it or remove it from your PATH
 	$ which conda
 
@@ -125,9 +125,7 @@ Since it works I'll leave it as is for now.)
     # If you directly use cluster command like scancel or qdel then
     # child jobs will not be terminated
     $ caper hpc abort [JOB_ID]
-	```
-
-
+  	```
 ## Input JSON file
 
 > **IMPORTANT**: DO NOT BLINDLY USE A TEMPLATE/EXAMPLE INPUT JSON. READ THROUGH THE FOLLOWING GUIDE TO MAKE A CORRECT INPUT JSON FILE.
