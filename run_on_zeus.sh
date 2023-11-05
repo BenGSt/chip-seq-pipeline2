@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #set -e # Stop on error
-ENCD_CHIP_DIR=/home/s.benjamin/bioinformatics_software/chip-seq-pipeline2/
+ENCD_CHIP_DIR=/home/s.benjamin/bioinformatics_software/encd_chip_seq_pipeline2_bengst
 
 main() {
   arg_parse "$@"
