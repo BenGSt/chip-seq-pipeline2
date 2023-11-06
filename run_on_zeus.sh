@@ -3,7 +3,7 @@
 ENCD_CHIP_DIR=/home/s.benjamin/bioinformatics_software/encode_pipelines/chip_seq_pipeline2_bengst
 CROMWELL_DIR=/home/s.benjamin/bioinformatics_software/encode_pipelines/cromwell_and_caper_conf
 # CROMWELL_DIR can be created by running "caper init pbs" and copying the contents of ~/.caper .
-# a line "pbs-queue=zeus_new_q" needs to be added to default.conf
+# a line "pbs-queue=zeus_new_q" needs to be added to default.conf and it's name changed to zeus_caper.conf
 #TODO: use a release of the pipeline rather than the dev version from github?
 
 main() {
@@ -28,7 +28,7 @@ create_caper_home(){
     mkdir ~/.caper
     womtool=$(basename $CROMWELL_DIR/womtool-*.jar)
     cromwell=$(basename $CROMWELL_DIR/cromwell-*.jar)
-    ln -s $ENCD_CHIP_DIR/zeus_default.conf ~/.caper/default.conf
+    ln -s $CROMWELL_DIR/zeus_caper.conf ~/.caper/default.conf
     ln -s $CROMWELL_DIR/$womtool ~/.caper/$womtool
     ln -s $CROMWELL_DIR/$cromwell ~/.caper/$cromwell
   else
