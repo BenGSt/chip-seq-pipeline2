@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #set -e # Stop on error
-ENCD_CHIP_DIR=/home/s.benjamin/bioinformatics_software/encode_pipelines/encd_chip_seq_pipeline2_bengst
+ENCD_CHIP_DIR=/home/s.benjamin/bioinformatics_software/encode_pipelines/chip_seq_pipeline2_bengst
 CROMWELL_DIR=/home/s.benjamin/bioinformatics_software/encode_pipelines/cromwell_and_caper_conf
 
 main() {
