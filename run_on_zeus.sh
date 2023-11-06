@@ -8,7 +8,7 @@ CROMWELL_DIR=/home/s.benjamin/bioinformatics_software/encode_pipelines/cromwell_
 
 main() {
   arg_parse "$@"
-  create_caper_home
+  config_caper
   write_bakend_conf
   source /home/s.benjamin/other_software/conda/bin/activate caper
   caper hpc submit $ENCD_CHIP_DIR/chip.wdl \
@@ -21,7 +21,7 @@ main() {
 }
 
 
-create_caper_home(){
+config_caper(){
   #check if ~/.caper exists
   if [ ! -d ~/.caper ]; then
     echo "Creating ~/.caper and symlinking cromwell and woomtools"
@@ -35,6 +35,13 @@ create_caper_home(){
     echo "~/.caper already exists for user $USER"
     echo "If you are uable to run the pipeline, please delete ~/.caper and rerun this script"
     echo
+  fi
+  # bengst 6.11.23: since from what I can tell only java 8 is available on zeus, I downloaded openjdk 21 and will add it to path
+  # check if the addition of java to the path is already in ~/.bashrc, if not add it. This is needed because caper
+  # sends the leader job that runs cromwell as the user and initialises the shell using ~/.bashrc
+  if ! grep -q "export PATH=/home/s.benjamin/other_software/jdk-21.0.1/bin:\$PATH" ~/.bashrc; then
+    echo "Adding openjdk21 bin to PATH in ~/.bashrc"
+    echo "export PATH=/home/s.benjamin/other_software/jdk-21.0.1/bin:\$PATH" >> ~/.bashrc
   fi
 
 }
