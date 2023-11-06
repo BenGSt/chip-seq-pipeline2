@@ -28,9 +28,9 @@ create_caper_home(){
     mkdir ~/.caper
     womtool=$(ls $CROMWELL_DIR/womtool-*.jar)
     cromwell=$(ls $CROMWELL_DIR/cromwell-*.jar)
-    ln -s $ENCD_CHIP_DIR/zeus_default.conf default.conf
-    ln -s $CROMWELL_DIR/$womtool $womtool
-    ln -s $CROMWELL_DIR/$cromwell $cromwell
+    ln -s $ENCD_CHIP_DIR/zeus_default.conf ~/.caper/default.conf
+    ln -s $CROMWELL_DIR/$womtool ~/.caper/$womtool
+    ln -s $CROMWELL_DIR/$cromwell ~/.caper/$cromwell
   else
     echo "~/.caper already exists for user $USER"
     echo "If you are uable to run the pipeline, please delete ~/.caper and rerun this script"
