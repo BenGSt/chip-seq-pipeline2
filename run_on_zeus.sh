@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #set -e # Stop on error
-ENCD_CHIP_DIR=/home/s.benjamin/bioinformatics_software/encd_chip_seq_pipeline2_bengst
+ENCD_CHIP_DIR=/home/s.benjamin/bioinformatics_software/encode_pipelines/encd_chip_seq_pipeline2_bengst
+CROMWELL_DIR=/home/s.benjamin/bioinformatics_software/encode_pipelines/cromwell_and_caper_conf
 
 main() {
   arg_parse "$@"
@@ -14,8 +15,8 @@ main() {
     --local-out-dir $PWD \
     --backend-file $(realpath ./zeus.backend.conf)
     --cromwell $ENCD_CHIP_DIR/cromwell-*.jar
-    --woomtools $ENCD_CHIP_DIR/woomtools-*.jar
-    --config $ENCD_CHIP_DIR/zeus_default.conf
+    --woomtools $CROMWELL_DIR/woomtools-*.jar
+    --config $CROMWELL_DIR/zeus_default.conf
 
 }
 
