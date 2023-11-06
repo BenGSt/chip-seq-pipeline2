@@ -26,10 +26,10 @@ create_caper_home(){
   if [ ! -d ~/.caper ]; then
     echo "Creating ~/.caper and symlinking cromwell and woomtools"
     mkdir ~/.caper
-    woomtools=$(ls $CROMWELL_DIR/woomtools-*.jar)
+    womtool=$(ls $CROMWELL_DIR/womtool-*.jar)
     cromwell=$(ls $CROMWELL_DIR/cromwell-*.jar)
     ln -s $ENCD_CHIP_DIR/zeus_default.conf default.conf
-    ln -s $CROMWELL_DIR/$woomtools $woomtools
+    ln -s $CROMWELL_DIR/$womtool $womtool
     ln -s $CROMWELL_DIR/$cromwell $cromwell
   else
     echo "~/.caper already exists for user $USER"
