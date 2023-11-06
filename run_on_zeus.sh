@@ -13,6 +13,10 @@ main() {
     --local-loc-dir $PWD \
     --local-out-dir $PWD \
     --backend-file $(realpath ./zeus.backend.conf)
+    --cromwell $ENCD_CHIP_DIR/cromwell-*.jar
+    --woomtools $ENCD_CHIP_DIR/woomtools-*.jar
+    --config $ENCD_CHIP_DIR/zeus_default.conf
+
 }
 
 write_bakend_conf(){
