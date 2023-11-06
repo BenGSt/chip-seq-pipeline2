@@ -2,6 +2,9 @@
 #set -e # Stop on error
 ENCD_CHIP_DIR=/home/s.benjamin/bioinformatics_software/encode_pipelines/chip_seq_pipeline2_bengst
 CROMWELL_DIR=/home/s.benjamin/bioinformatics_software/encode_pipelines/cromwell_and_caper_conf
+# CROMWELL_DIR can be created by running "caper init pbs" and copying the contents of ~/.caper .
+# a line "pbs-queue=zeus_new_q" needs to be added to default.conf
+#TODO: use a release of the pipeline rather than the dev version from github?
 
 main() {
   arg_parse "$@"
